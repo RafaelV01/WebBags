@@ -1,4 +1,7 @@
-import { getAllBags } from "./data.js"; // Asegúrate de que esta función exista en tu archivo data.js
+// Asegúrate de que esta función exista en tu archivo data.js
+import { getAllBags, addBag, deleteBag, getBag, updateBagData, db } from "./data.js";
+import { logOut, archivoimg, createUserEmailPassword } from "./global.js";
+import { getDoc, setDoc, collection, doc } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
     const productsListElement = document.getElementById("products-list");
@@ -40,3 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 });
+
+
+// Obtener las URL de las imágenes del carrusel desde Firestore
+

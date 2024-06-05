@@ -8,7 +8,7 @@ const bagsListElement = document.getElementById("bags-list");
 
 logoutBtn.addEventListener("click", () => {
   logOut().then(() => {
-    window.location.href = "../index.html";
+    window.location.href = "..//index.html";
   });
 });
 
@@ -260,3 +260,5 @@ function renderBags(bags) {
     bagsListElement.appendChild(listItem);
   });
 }
+
+

@@ -61,3 +61,4 @@ export const archivoimg = async (file, referencia) => {
   const url = await getDownloadURL(storageref);
   return url;
 };
+

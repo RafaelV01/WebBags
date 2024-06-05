@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Error al guardar datos en la base de datos");
         alert(e);
       });
-    window.location.href = "../index.html";
+    window.location.href = "..//index.html";
   }
 
   signInBtn.addEventListener("click", signIn);
