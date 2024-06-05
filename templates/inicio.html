@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Bolsos</title>
+    <link rel="stylesheet" href="/styles/inicio.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="/pr2/resources/img/logo.png" alt="Logo de la tienda" class="logo">
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="./categorias/mujer.html">MUJER</a></li>
+                    <li><a href="./categorias/hombre.html">HOMBRE</a></li>
+                    <li><a href="./categorias/nina.html">NIÑA</a></li>
+                    <li><a href="./categorias/nino.html">NIÑO</a></li>
+                    <li><a href="./categorias/unisex.html">UNISEX</a></li>
+                    <li><a href="./categorias/mascotas.html">MASCOTAS</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="/pr2/templates/login.html" class="login"><i class="fas fa-user"></i></a>
+                <a href="/pr2/templates/categorias/carrito.html" class="cart"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                <a href="/templates/admin.html" class="options-icon"><i class="fas fa-cog"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <!-- Agrega el elemento product-list -->
+        <ul class="view-productos" id="products-list"></ul>
+    </div>
+
+    <!-- Modal de Bootstrap -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Nombre del Producto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="product-details-img">
+                        <img src="" alt="Imagen del producto" id="modal-product-img" class="img-fluid">
+                    </div>
+                    <h2 id="modal-product-title">Nombre del Producto</h2>
+                    <p id="modal-product-description">Descripción detallada del producto.</p>
+                    <p id="modal-product-price">Precio: $99.99</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="addToCart()">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <section id="somos">
+                <h3>Somos</h3>
+                <p>Somos una tienda web de bolsos llamada 'Bagstyle'.</p>
+            </section>
+            <section id="contacto">
+                <h3>Contacto</h3>
+                <p>Email: referencia.bagstyle@gmail.co</p>
+                <p>Tel: 608 35 71 97 o Cel: 314-895-7684</p>
+            </section>
+            <p>&copy; 2024 Bags Style. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../controllers/script.js" type="module"></script>
+    <script>
+        // Función para mostrar los detalles del producto en un modal
+        function showProductDetails(title, description, price, imgSrc) {
+            // Actualiza los detalles del producto con los datos proporcionados
+            document.getElementById('modal-product-title').innerText = title;
+            document.getElementById('modal-product-description').innerText = description;
+            document.getElementById('modal-product-price').innerText = `Precio: ${price}`;
+            document.getElementById('modal-product-img').src = imgSrc;
+
+            // Actualiza el título del modal
+            document.querySelector('.modal-title').innerText = title;
+
+            // Abre el modal
+            $('#productModal').modal('show');
+        }
+    </script>
+</body>
+</html>

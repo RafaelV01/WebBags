@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administrador</title>
+  <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="/pr2/resources/img/logo.png" alt="Logo de la tienda" class="logo">
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="./categorias/mujer.html">Mujer</a></li>
+          <li><a href="./categorias/hombre.html">Hombre</a></li>
+          <li><a href="./categorias/nina.html">Niña</a></li>
+          <li><a href="./categorias/nino.html">Niño</a></li>
+          <li><a href="./categorias/unisex.html">Unisex</a></li>
+          <li><a href="./categorias/mascotas.html">Mascotas</a></li>
+        </ul>
+      </nav>
+      <div class="header-icons">
+        <a href="../login.html" class="login"><i class="fas fa-user"></i></a>
+        <a href="./carrito.html" class="cart"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+        <a href="./admin.html" class="options-icon"><i class="fas fa-cog"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <h1>Panel de Administrador</h1>
+
+  <div class="container">
+    <div class="button-container">
+      <button id="create-bag-btn">Crear Nuevo Bolso</button>
+    </div>
+    
+    <div class="button-container">
+      <button type="button" id="logout-btn">Cerrar Sesión</button>
+    </div>
+
+    <!-- Agrega una lista para mostrar los bolsos -->
+    <ul class="view-productos" id="bags-list"></ul>
+  </div>
+
+  <script type="module" src="../controllers/admin.js"></script>
+</body>
+</html>

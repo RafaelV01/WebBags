@@ -1,0 +1,214 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Color de texto principal */
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar el encabezado */
+    z-index: 1000; /* Asegura que el encabezado esté encima del contenido */
+    width: 100%; /* Ajusta el ancho del encabezado */
+    height: 13%;
+    position: fixed; /* Fija el encabezado en la parte superior */
+    top: 0; /* Fija el encabezado en la parte superior */
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+  .header-icons .options-icon {
+    margin-left: 10px; /* Ajusta el espacio entre los iconos */
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .titulo{
+    padding-top: 30px;
+  }
+  
+  .logo {
+    width: 150px; /* Logo más grande */
+    height: auto;
+  }
+  
+  .logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .header-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .header-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem; /* Tamaño de los iconos */
+    transition: color 0.3s ease; /* Transición suave del color */
+  }
+  
+  .header-icons a:hover,
+  .header-icons a:focus {
+    color: #007bff; /* Cambia el color al azul al pasar el puntero */
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar ul li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-weight: bold; /* Texto en negrilla */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    transition: color 0.3s ease; /* Transición suave del color */
+  }
+  
+  .navbar ul li a:hover,
+  .navbar ul li a:focus {
+    color: #007bff; /* Cambia el color al azul al pasar el puntero */
+  }
+  
+  .main-content {
+    padding-top: 4rem; /* Ajusta el padding para compensar la altura del encabezado */
+    min-height: calc(100vh - 4rem); /* Ajusta la altura mínima para que el pie de página no se solape */
+  }
+  
+  /* Estilos para productos */
+  .view-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    list-style-type: none;
+  }
+  
+  .product-list-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .product-list-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-info {
+    margin: 15px 0;
+  }
+  
+  .details-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .details-button:hover {
+    background-color: #007bff;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    clear: both; /* Limpia el contenido flotante */
+    font-weight: bold; /* Texto en negrilla */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    position: relative; /* Asegura que el pie de página no se superponga al contenido */
+    bottom: 0; /* Fija el pie de página al final */
+  }
+  
+  /* Estilos para detalles del producto */
+  .product-details {
+    display: none;
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+  }
+  
+  .product-details .product-details-img {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .product-details .product-details-img img {
+    max-width: 100%;
+    max-height: 400px;
+    height: auto;
+  }
+  
+  .product-details .product-details-content {
+    padding: 0 2rem;
+  }
+  
+  .product-details h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .product-details p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Estilos para el botón de cerrar */
+  .product-details .close-btn {
+    text-align: right;
+    margin-top: 1rem;
+  }
+  
+  .product-details .close-btn a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .product-details .close-btn a:hover {
+    color: #007bff;
+  }
+  
+  .featured-products h2 {
+    margin-top: 2rem; /* Ajusta este valor según sea necesario */
+    text-align: left;
+    font-size: 2rem;
+    color: #333;
+  }
+  
